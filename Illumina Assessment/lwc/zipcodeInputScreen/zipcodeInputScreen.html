@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Zip Code Search">
+        <div class="slds-p-horizontal_medium">
+            <lightning-input label="Enter Zip Code" value={zipCode} onchange={handleZipCodeChange}></lightning-input>
+            <lightning-button label="Search" variant="brand" onclick={handleSearch}></lightning-button>
+        </div>
+    </lightning-card>
+    <template if:true={isUsLocation}>
+        <c-location-display-u-s location-data={locationData}></c-location-display-u-s>
+    </template>
+</template>
